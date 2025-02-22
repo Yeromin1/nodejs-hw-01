@@ -3,9 +3,9 @@ import { writeContacts } from '../utils/writeContacts.js';
 
 export const addOneContact = async () => {
   try {
-    const newContacts = createFakeContact();
-    await writeContacts(newContacts);
-    return newContacts;
+    const newContact = createFakeContact();
+    await writeContacts([newContact]);
+    return newContact;
   } catch (error) {
     console.log('error: ', error.message);
   }
